@@ -18,8 +18,8 @@ export default function AppTable({ data }: { data: Array<AppInfo> }) {
   ];
 
   return (
-    <div className="bg-red-500">
-      <DataGrid rows={rows} columns={columns} />
+    <div className="px-16 ">
+      <DataGrid className="!text-white" rows={rows} columns={columns} />
     </div>
   );
 }
