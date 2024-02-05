@@ -2,8 +2,6 @@
 
 Tauri Zen is a small but effective desktop application built using [Tauri](https://tauri.studio/) that helps you regain focus by disabling distracting applications and webpages. Whether you're working, studying, or just need some quality screen time, Tauri Zen has got you covered.
 
-![Tauri Zen Screenshot](screenshot.png)
-
 ## Features
 
 - Easily block distracting websites and apps.
