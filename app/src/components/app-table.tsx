@@ -13,12 +13,12 @@ export default function AppTable({ data }: { data: Array<AppInfo> }) {
   ];
 
   const columns: GridColDef[] = [
-    { field: "app_name", headerName: "Name", width: 150 },
-    { field: "app_path", headerName: "Path", width: 150 },
+    { field: "app_name", headerName: "Name", width: 350 },
+    { field: "app_path", headerName: "Path", width: 350 },
   ];
 
   return (
-    <div style={{ height: 300, width: "100%" }}>
+    <div className="bg-red-500">
       <DataGrid rows={rows} columns={columns} />
     </div>
   );
