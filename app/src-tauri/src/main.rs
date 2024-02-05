@@ -156,6 +156,7 @@ fn search_apps(term: &str) -> Vec<AppInfo> {
     found_apps
 }
 
+
 #[derive(Serialize, Deserialize)]
 struct Whitelist {
     apps: Vec<String>,
