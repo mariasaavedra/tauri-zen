@@ -3,8 +3,11 @@ import "./App.css";
 import AppTable from "./components/app-table";
 import { useEffect, useState } from "react";
 import { AppInfo } from "./types";
-import { Button, Switch } from "@mui/material";
-import { Add } from "@mui/icons-material";
+import { Button, Chip, FormControlLabel, Switch } from "@mui/material";
+import {
+  Add,
+  DoDisturb,
+} from "@mui/icons-material";
 
 function App() {
   const [foundApps, setFoundApps] = useState<Array<AppInfo>>([]);
@@ -33,7 +36,16 @@ function App() {
         <Add />
         Add to list
       </Button>
-      <Switch color="primary"  defaultChecked />
+      <FormControlLabel
+        value="blocking"
+        control={<Switch color="primary" />}
+        label={
+          <>
+            <Chip icon={<DoDisturb />} label="Blocking" />
+          </>
+        }
+        labelPlacement="start"
+      />
       <AppTable data={foundApps || []} />
     </section>
   );
