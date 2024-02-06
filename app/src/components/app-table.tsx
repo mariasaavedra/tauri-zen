@@ -1,13 +1,10 @@
 import * as React from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
-import Switch from "@mui/material/Switch";
-import WifiIcon from "@mui/icons-material/Wifi";
-import BluetoothIcon from "@mui/icons-material/Bluetooth";
 import { AppInfo } from "../types";
+import { Button, Switch } from "@mui/material";
 
 export default function AppTable({ data }: { data: Array<AppInfo> }) {
   const [checked, setChecked] = React.useState([""]);
@@ -26,9 +23,6 @@ export default function AppTable({ data }: { data: Array<AppInfo> }) {
 
   const items = data.map((app) => (
     <ListItem>
-      {/* <ListItemIcon>
-
-      </ListItemIcon> */}
       <ListItemText
         className="text-gray-700"
         id={`switch-list-label-${app.app_name}`}
@@ -39,6 +33,7 @@ export default function AppTable({ data }: { data: Array<AppInfo> }) {
         id={`switch-list-label-${app.app_path}`}
         primary={app.app_path}
       />
+
       <Switch
         edge="end"
         onChange={handleToggle(app.app_name)}
@@ -59,7 +54,7 @@ export default function AppTable({ data }: { data: Array<AppInfo> }) {
         maxHeight: 500,
         overflow: "scroll",
       }}
-      subheader={<ListSubheader>Whitelisted Items</ListSubheader>}
+      subheader={<ListSubheader>Applications</ListSubheader>}
     >
       {items}
     </List>
